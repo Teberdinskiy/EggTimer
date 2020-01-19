@@ -13,6 +13,7 @@
 		984B943923D438580027344F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984B943723D438580027344F /* Main.storyboard */; };
 		984B943B23D4385B0027344F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984B943A23D4385B0027344F /* Assets.xcassets */; };
 		984B943E23D4385B0027344F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984B943C23D4385B0027344F /* LaunchScreen.storyboard */; };
+		984B944723D4390C0027344F /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 984B944623D4390C0027344F /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		984B943A23D4385B0027344F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		984B943D23D4385B0027344F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		984B943F23D4385B0027344F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984B944623D4390C0027344F /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +63,19 @@
 				984B943523D438580027344F /* ViewController.swift */,
 				984B943723D438580027344F /* Main.storyboard */,
 				984B943A23D4385B0027344F /* Assets.xcassets */,
+				984B944523D438DE0027344F /* Sound */,
 				984B943C23D4385B0027344F /* LaunchScreen.storyboard */,
 				984B943F23D4385B0027344F /* Info.plist */,
 			);
 			path = EggTimer;
+			sourceTree = "<group>";
+		};
+		984B944523D438DE0027344F /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				984B944623D4390C0027344F /* alarm_sound.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			files = (
 				984B943E23D4385B0027344F /* LaunchScreen.storyboard in Resources */,
 				984B943B23D4385B0027344F /* Assets.xcassets in Resources */,
+				984B944723D4390C0027344F /* alarm_sound.mp3 in Resources */,
 				984B943923D438580027344F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
