@@ -126,6 +126,21 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09Z-O1-sAr" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="404" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bZB-RG-vaD">
+                                                <rect key="frame" x="20" y="120.5" width="364" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="VVQ-3k-OM1"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bZB-RG-vaD" firstAttribute="leading" secondItem="09Z-O1-sAr" secondAttribute="leading" constant="20" symbolic="YES" id="15i-FQ-sMN"/>
+                                            <constraint firstItem="bZB-RG-vaD" firstAttribute="centerY" secondItem="09Z-O1-sAr" secondAttribute="centerY" id="KjC-7f-XQP"/>
+                                            <constraint firstAttribute="trailing" secondItem="bZB-RG-vaD" secondAttribute="trailing" constant="20" symbolic="YES" id="yoR-75-uxs"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -140,6 +155,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="eggProgressBar" destination="bZB-RG-vaD" id="3sb-EM-Adh"/>
                         <outlet property="titleLabel" destination="acL-3U-hQd" id="Kub-2q-N9h"/>
                     </connections>
                 </viewController>
