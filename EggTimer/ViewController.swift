@@ -9,12 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 7]
+    
+    var secondsRemaining = 60
+    
+    var timer = Timer()
+    
+    @IBAction func hardnessSelected(_ sender: UIButton) {
+        
+        timer.invalidate()
+        
+        let hardness = sender.currentTitle!
+        
+        secondsRemaining = eggTimes[hardness]!
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
-
-
+    
+    @objc func updateCounter(){
+        if secondsRemaining > 0 {
+            print("\(secondsRemaining) seconds.")
+            secondsRemaining -= 1
+        } else {
+            timer.invalidate()
+            titleLabel.text = "Время вышло!"
+        }
+    }
+    
 }
+
+
+
+
 
