@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         let hardness = sender.currentTitle!
         totalTime = eggTimes[hardness]!
-        
+        //We are returning the default data for the new countdown timer.
         eggProgressBar.progress = 0.0
         secondPassed = 0
         titleLabel.text = hardness
