@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var player: AVAudioPlayer!
     
-    let eggTimes = ["Soft": 300, "Medium": 480, "Hard": 720]
+    let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 720]
     var timer = Timer()
     var totalTime = 0
     var secondPassed = 0
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         eggProgressBar.progress = 0.0
         secondPassed = 0
         titleLabel.text = hardness
+        titleLabel.textColor = .white
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         
@@ -42,7 +43,9 @@ class ViewController: UIViewController {
             eggProgressBar.progress = Float(secondPassed) / Float(totalTime)
         } else {
             timer.invalidate()
+            titleLabel.textColor = .red
             titleLabel.text = "ГОТОВО!"
+            
             
             let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
             player = try! AVAudioPlayer(contentsOf: url!)

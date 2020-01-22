@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myBackground" translatesAutoresizingMaskIntoConstraints="NO" id="m5g-5E-mOS">
+                                <rect key="frame" x="-44" y="0.0" width="502" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="xXy-A6-amB" userLabel="Vertical Stack View">
                                 <rect key="frame" x="5" y="44" width="404" height="818"/>
                                 <subviews>
@@ -24,7 +27,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какие яйца вы предпочитаете?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="acL-3U-hQd" userLabel="Title Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="404" height="246.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -145,11 +148,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="m5g-5E-mOS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="44" id="0Ql-vJ-Q1O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xXy-A6-amB" secondAttribute="trailing" constant="5" id="2sY-Oy-uhI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xXy-A6-amB" secondAttribute="bottom" id="4yX-SL-bgz"/>
+                            <constraint firstItem="m5g-5E-mOS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-44" id="H27-Ef-fyw"/>
                             <constraint firstItem="xXy-A6-amB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="J3w-bh-M8O"/>
+                            <constraint firstItem="m5g-5E-mOS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ME5-pj-Jgm"/>
+                            <constraint firstAttribute="bottom" secondItem="m5g-5E-mOS" secondAttribute="bottom" id="kc4-Sr-60z"/>
                             <constraint firstItem="xXy-A6-amB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xhc-ft-CXZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -161,12 +167,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+            <point key="canvasLocation" x="136.60714285714286" y="111.59420289855073"/>
         </scene>
     </scenes>
     <resources>
         <image name="hard_egg" width="287.5" height="366"/>
         <image name="medium_egg" width="288" height="363"/>
+        <image name="myBackground" width="384.5" height="582"/>
         <image name="soft_egg" width="287" height="365"/>
     </resources>
 </document>
